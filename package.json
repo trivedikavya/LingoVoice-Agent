@@ -1,0 +1,17 @@
+{
+  "name": "lingovoice-agent",
+  "version": "1.0.0",
+  "description": "**Real-time Speech-to-Speech Translation Agent**   Powered by Lingo.dev & Murf AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "lingo.dev": "^0.131.1"
+  }
+}
