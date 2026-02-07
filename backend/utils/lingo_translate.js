@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// FIX: Added { silent: true } to stop [dotenv] logs from leaking into the output
+// Ensure .env is loaded silently to prevent log leakage into stdout
 dotenv.config({ 
     path: path.resolve(__dirname, '../../.env'),
     silent: true 
@@ -14,9 +14,8 @@ dotenv.config({
 
 async function translate() {
     const text = process.argv[2];
-    const targetLang = process.argv[3];
+    const targetLang = process.argv[3]; // Received from Python backend
 
-    // Check for API Key immediately
     if (!process.env.LINGO_API_KEY) {
         process.stderr.write("ERROR: LINGO_API_KEY missing");
         process.exit(1);
@@ -27,16 +26,17 @@ async function translate() {
     });
 
     try {
+        // Explicitly setting targetLocale fixes the mirroring issue
         const translated = await lingo.localizeText(text, {
-            sourceLocale: "en",
+            sourceLocale: "en", // Assuming English source for speech capture
             targetLocale: targetLang
         });
         
-        // Output ONLY the translation to stdout
+        // Output result as UTF-8 Buffer for reliable Python capture
         if (translated) {
-            process.stdout.write(translated);
+            process.stdout.write(Buffer.from(translated, 'utf-8'));
         } else {
-            process.stderr.write("ERROR: Empty translation");
+            process.stderr.write("ERROR: Empty translation received");
             process.exit(1);
         }
     } catch (error) {

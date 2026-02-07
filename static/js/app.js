@@ -1,4 +1,8 @@
-// UI Element Mapping
+/**
+ * LINGOVOICE AI - Frontend Logic v5.2
+ * Features: High-end UI states, Masterpiece Glow, and Global Voice Support.
+ */
+
 const aiOrb = document.getElementById('aiOrb');
 const orbIcon = document.getElementById('orbIcon');
 const statusLabel = document.getElementById('statusLabel');
@@ -14,7 +18,6 @@ let recognition;
 let isRecording = false;
 let capturedText = "";
 
-// 1. Initialize Speech Engine
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 if (SpeechRecognition) {
@@ -44,7 +47,6 @@ if (SpeechRecognition) {
     statusLabel.innerText = "Error: Browser Unsupported";
 }
 
-// 2. Control Logic
 recordBtn.onclick = () => {
     if (!isRecording) {
         startRecordingSession();
@@ -57,16 +59,17 @@ function startRecordingSession() {
     isRecording = true;
     capturedText = "";
     recognition.lang = document.getElementById('sourceLanguage').value;
+    
     try {
         recognition.start();
         document.body.classList.add('is-listening');
         orbIcon.className = "fa-solid fa-microphone text-white text-2xl animate-pulse";
         statusLabel.innerText = "Listening to Audio...";
         statusLabel.style.color = "#ef4444";
+        
         recordBtnText.innerText = "Finish Capture";
         micIcon.className = "fa-solid fa-circle-stop mr-2";
         
-        // Lock button and remove glow for new capture
         translateBtn.classList.remove('primary-glow');
         translateBtn.classList.add('opacity-20', 'pointer-events-none');
         resultDiv.classList.add('hidden');
@@ -80,18 +83,17 @@ function stopRecordingSession() {
     orbIcon.className = "fa-solid fa-check text-white text-2xl";
     statusLabel.innerText = "Voice Captured";
     statusLabel.style.color = "#06b6d4";
+    
     recordBtnText.innerText = "Capture Voice";
     micIcon.className = "fa-solid fa-microphone-lines mr-2";
 
-    // TRIGGER GLOW: Only if speech exists
     if (capturedText.trim() !== "") {
-        translateBtn.classList.add('primary-glow');
+        translateBtn.classList.add('primary-glow'); 
         translateBtn.classList.remove('opacity-20', 'pointer-events-none');
-        statusLabel.innerText = "System Ready to Translate";
+        statusLabel.innerText = "Ready to Translate";
     }
 }
 
-// 3. Translation Flow
 translateBtn.onclick = async () => {
     if (!capturedText) return;
 
@@ -114,10 +116,12 @@ translateBtn.onclick = async () => {
         });
 
         const data = await response.json();
+        
         if (data.success) {
             document.body.classList.remove('is-thinking');
             document.body.classList.add('is-speaking');
             orbIcon.className = "fa-solid fa-volume-high text-white text-2xl";
+            
             resultDiv.classList.remove('hidden');
             translatedText.innerText = data.translated_text;
             
@@ -125,17 +129,16 @@ translateBtn.onclick = async () => {
                 const audio = new Audio(data.audio_url);
                 audio.play();
                 statusLabel.innerText = "Playing Voice Output...";
+                
                 audio.onended = () => {
                     document.body.classList.remove('is-speaking');
                     orbIcon.className = "fa-solid fa-robot text-white text-2xl";
                     statusLabel.innerText = "System Standby";
                 };
             }
-        } else {
-            alert("API Error: " + data.error);
         }
     } catch (error) {
-        console.error(error);
+        statusLabel.innerText = "System Error";
     } finally {
         translateBtn.disabled = false;
         translateBtn.innerHTML = '<i class="fa-solid fa-sparkles mr-2"></i> Translate & Speak';
