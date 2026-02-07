@@ -1,202 +1,219 @@
 # 🌍 LingoVoice AI
 
-**Real-time Speech-to-Speech Translation Agent**  
-Powered by Lingo.dev & Murf AI
+**Breaking Language Barriers with Real-Time Neural Speech Translation**
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-![Flask](https://img.shields.io/badge/flask-3.0-green)
+<div align="center">
+
+![LingoVoice AI](https://img.shields.io/badge/LingoVoice-AI-blue?style=for-the-badge&logo=openai)
+![Hackathon 2026](https://img.shields.io/badge/Hackathon-2026-orange?style=for-the-badge)
+![Python](https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge&logo=python)
+![Node.js](https://img.shields.io/badge/node.js-16+-green?style=for-the-badge&logo=node.js)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+
+**[🎥 Demo Video](#) • [📖 Documentation](SETUP_GUIDE_FINAL.md) • [🐛 Report Bug](https://github.com/trivedikavya/LingoVoice-Agent/issues)**
 
 ---
 
-## 📖 Overview
+*For the 2026 Hackathon, I didn't just want to build another "translator app."  
+I wanted to build a **communications terminal**—something that felt like it came from a sci-fi movie.*
 
-LingoVoice AI is a cutting-edge real-time translation application that converts speech from one language to another with natural-sounding voice output. It's designed to break language barriers and enable seamless communication across cultures.
+</div>
 
-### 🎯 Key Features
+---
 
-- 🎤 **Real-time Speech Recognition** - Uses Web Speech API for accurate transcription
-- 🌐 **AI-Powered Translation** - Leverages Lingo.dev for context-aware localization
-- 🔊 **Natural Voice Synthesis** - Murf AI generates high-quality, expressive speech
-- 🚀 **Fast Processing** - Near-instant translation and audio generation
-- 🎨 **Beautiful UI** - Modern, responsive design with Tailwind CSS
-- 📱 **Cross-platform** - Works on any modern web browser
+## 💡 The Problem Statement
 
-### 🛠 Technology Stack
+In an increasingly connected world, **language barriers remain the biggest obstacle to real-time communication**. Existing translation tools often:
 
-| Component | Technology |
-|-----------|-----------|
-| **Frontend** | HTML5, Tailwind CSS, Vanilla JavaScript |
-| **Backend** | Python, Flask |
-| **Translation** | Lingo.dev API/SDK |
-| **Voice Synthesis** | Murf AI API |
-| **Speech Recognition** | Web Speech API |
+- ❌ Feel robotic and mechanical
+- ❌ Lack cultural context and nuance
+- ❌ Fail to capture the emotion of human speech
+- ❌ Sound unnatural, breaking conversation immersion
+
+Standard text-to-speech engines are technically functional but emotionally hollow.
+
+---
+
+## ✨ The Solution
+
+**LingoVoice AI** is a bi-directional, real-time speech-to-speech agent that bridges the gap between "text on a screen" and "real human connection."
+
+It combines the power of:
+- **Lingo.dev** - Context-aware localization that preserves cultural nuance
+- **Murf AI Gen2** - Hyper-realistic human voice synthesis
+
+Unlike simple translators, LingoVoice **understands locale nuances** and **speaks back with emotional depth**—all wrapped in a futuristic **"Glassmorphic"** interface that feels like a premium product.
+
+---
+
+## 🎯 Key Features
+
+### 🌐 Bi-Directional Polyglot
+Seamlessly translates between **English, Hindi, Spanish, French, Chinese, and German** with cultural context preservation.
+
+### 🎙️ Gen2 Neural Voices
+Uses verified, high-fidelity voices (**Enrique**, **Amara**, **Shweta**, **Baolin**) that sound **indistinguishable from humans**. These voices breathe, pause, and intonate naturally.
+
+### 🎨 "Masterpiece" UI
+A fully responsive, **dark-mode Glassmorphism** design featuring:
+- **Reactive AI Orb** - Changes color and animation based on system state
+  - 🔴 **Red Pulse** → Listening
+  - 🟣 **Purple Bounce** → Thinking/Translating
+  - 🟢 **Emerald Flow** → Speaking
+- **Cyan Glow Button** - Call-to-action that activates on valid speech capture
+- **Responsive Mesh Background** - Dynamic gradients stunning on any device
+- **Real-Time Visual Feedback** - Icons and animations guide every interaction
+
+### 🏗️ Smart Hybrid Architecture
+A unique **Flask + Node.js Bridge** that leverages:
+- Python's robust web serving capabilities
+- JavaScript SDK's full power for Lingo.dev integration
+- Seamless inter-process communication
+
+### ⚡ Real-Time Performance
+- Translation Speed: **< 2 seconds**
+- Audio Generation: **< 3 seconds**
+- Total Pipeline: **< 5 seconds** end-to-end
+
+---
+
+## 🛠️ The Tech Stack
+
+| Component | Technology | Purpose |
+|-----------|-----------|---------|
+| **Frontend** | HTML5, Tailwind CSS, Vanilla JS | Glassmorphic UI with Web Speech API |
+| **Backend** | Python (Flask) | API orchestration and server logic |
+| **Bridge** | Node.js | Lingo.dev SDK integration layer |
+| **AI Translation** | Lingo.dev SDK | Context-aware localization engine |
+| **Voice Synthesis** | Murf AI Gen2 API | Hyper-realistic neural voice generation |
+| **Speech Recognition** | Web Speech API | Real-time browser-based STT |
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
-- Python 3.8 or higher
-- Node.js 16+ (for Lingo.dev SDK)
-- Active internet connection
+- Python 3.8+
+- Node.js 16+
+- Chrome or Edge browser
 - Microphone access
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/LingoVoiceAI.git
-   cd LingoVoiceAI
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/trivedikavya/LingoVoice-Agent.git
+cd LingoVoice-Agent
 
-2. **Create virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+# 2. Set up Python environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   npm install  # For Lingo.dev SDK
-   ```
+# 3. Install Python dependencies
+pip install flask flask-cors python-dotenv requests
 
-4. **Configure environment variables**
-   
-   Create a `.env` file in the root directory:
-   ```env
-   LINGO_API_KEY=your_lingo_api_key_here
-   MURF_API_KEY=your_murf_api_key_here
-   FLASK_ENV=development
-   FLASK_DEBUG=True
-   ```
+# 4. Install Node.js dependencies
+npm install lingo.dev dotenv
 
-5. **Run the application**
-   ```bash
-   python backend/app.py
-   ```
+# 5. Configure environment variables
+# Create .env file with your API keys
+echo "LINGO_API_KEY=your_lingo_api_key" > .env
+echo "MURF_API_KEY=your_murf_api_key" >> .env
 
-6. **Open in browser**
-   ```
-   http://localhost:5000
-   ```
+# 6. Run the application
+python backend/app.py
+
+# 7. Open in browser
+# Navigate to http://localhost:5000
+```
+
+### Get Your API Keys
+- **Lingo.dev**: [https://lingo.dev](https://lingo.dev) → Dashboard → Generate API Key
+- **Murf AI**: [https://murf.ai/api](https://murf.ai/api) → API Dashboard → Generate Key
 
 ---
 
-## 🎮 Usage
+## 🎮 How It Works
 
-1. **Select Languages**
-   - Choose your source language (the language you'll speak)
-   - Choose your target language (the language you want to translate to)
-
-2. **Start Recording**
-   - Click the "Start Recording" button
-   - Speak clearly into your microphone
-   - Click "Stop Recording" when done
-
-3. **View Translation**
-   - See the transcribed text in real-time
-   - Watch the translation appear
-   - Listen to the automatically generated audio
+1. **Select Languages** - Choose source (your language) and target (translation)
+2. **Click "Start Listening"** - AI Orb turns red and pulses
+3. **Speak Clearly** - Your speech is transcribed in real-time
+4. **Watch the Magic** - Orb turns purple as Lingo.dev translates
+5. **Listen** - Orb turns green as Murf AI Gen2 speaks the translation
 
 ---
 
-## 📁 Project Structure
+## 🏗️ Project Architecture
 
 ```
-LingoVoiceAI/
+LingoVoice-Agent/
 │
 ├── backend/
-│   ├── app.py                 # Main Flask application
+│   ├── app.py                    # Flask server with 3 API endpoints
 │   └── utils/
-│       ├── lingo_helper.py    # Lingo.dev integration
-│       └── lingo_translate.js # Node.js translation bridge
+│       └── lingo_translate.js    # Node.js bridge for Lingo.dev SDK
 │
 ├── templates/
-│   └── index.html             # Main HTML template
+│   └── index.html                # Glassmorphic UI with AI Orb
 │
 ├── static/
 │   └── js/
-│       └── app.js             # Frontend JavaScript
+│       └── app.js               # Frontend logic & AI Orb controller
 │
-├── venv/                      # Virtual environment
-├── .env                       # Environment variables (not in repo)
-├── .gitignore                # Git ignore file
-├── requirements.txt          # Python dependencies
-├── package.json              # Node.js dependencies
-├── README.md                 # This file
-└── SETUP_GUIDE.md           # Detailed setup instructions
+├── .env                          # API keys (not committed)
+├── .gitignore                    # Security rules
+├── requirements.txt              # Python dependencies
+├── package.json                  # Node.js dependencies
+└── README.md                     # This file
 ```
 
 ---
 
-## 🔧 API Integration
+## 🎨 The AI Orb: Visual State Machine
 
-### Lingo.dev Integration
+The central **AI Orb** provides instant visual feedback:
 
-LingoVoice AI uses Lingo.dev's powerful localization engine for accurate, context-aware translations:
+| State | Color | Animation | Trigger |
+|-------|-------|-----------|---------|
+| **Idle** | Blue Gradient | Gentle Float | System ready |
+| **Listening** | Red Gradient | Pulse | Capturing speech |
+| **Thinking** | Purple Gradient | Bounce | Translating with Lingo.dev |
+| **Speaking** | Green Gradient | Flow | Playing Murf AI audio |
+| **Error** | Orange Gradient | Shake | Something went wrong |
 
-```python
-# Example translation call
-translated_text = translate_with_lingo(
-    text="Hello, how are you?",
-    source_lang="en",
-    target_lang="hi"
-)
-```
-
-**Key Features:**
-- Context-aware translation
-- Technical term preservation
-- Multi-language support
-- High accuracy
-
-### Murf AI Integration
-
-Natural-sounding voice synthesis powered by Murf AI's Gen2 model:
-
-```python
-# Example TTS call
-audio_url = generate_speech_murf(
-    text="नमस्ते, आप कैसे हैं?",
-    voice_id="swara"
-)
-```
-
-**Key Features:**
-- 150+ voices
-- 35+ languages
-- Multiple accents
-- Customizable speech parameters
+Each state includes:
+- Custom gradient backgrounds
+- Unique CSS animations
+- Responsive glow effects
+- Smooth transitions
 
 ---
 
-## 🌐 Supported Languages
+## 🌐 Supported Languages & Voices
 
-| Code | Language | Voices Available |
-|------|----------|-----------------|
-| `en` | English | ✅ Multiple |
-| `hi` | Hindi | ✅ Multiple |
-| `zh` | Chinese (Mandarin) | ✅ Multiple |
-| `es` | Spanish | ✅ Multiple |
-| `fr` | French | ✅ Multiple |
-| `de` | German | ✅ Multiple |
+| Language | Code | Voice Name | Voice ID | Type | Gender |
+|----------|------|------------|----------|------|--------|
+| **English** | `en` | Natalie | `natalie` | Gen2 | Female |
+| **English** | `en` | Michael | `michael` | Gen2 | Male |
+| **Hindi** | `hi` | Shweta | `shweta` | Gen2 | Female |
+| **Spanish** | `es` | Enrique | `enrique` | Gen2 | Male |
+| **French** | `fr` | Amara | `amara` | Gen2 | Female |
+| **German** | `de` | Werner | `werner` | Gen2 | Male |
+| **Chinese** | `zh` | Baolin | `baolin` | Gen2 | Female |
 
-*More languages can be added by extending the configuration*
+All voices are **Murf AI Gen2** - the latest generation with hyper-realistic intonation, natural pauses, and emotional depth.
 
 ---
 
 ## 📊 API Endpoints
 
-### POST `/api/translate`
-Translate text using Lingo.dev
+### `POST /api/translate`
+Translate text using Lingo.dev's context-aware engine.
 
 **Request:**
 ```json
 {
-  "text": "Hello",
+  "text": "Hello, how are you?",
   "source_language": "en",
   "target_language": "hi"
 }
@@ -206,22 +223,21 @@ Translate text using Lingo.dev
 ```json
 {
   "success": true,
-  "original_text": "Hello",
-  "translated_text": "नमस्ते",
+  "original_text": "Hello, how are you?",
+  "translated_text": "नमस्ते, आप कैसे हैं?",
   "source_language": "en",
   "target_language": "hi"
 }
 ```
 
-### POST `/api/synthesize`
-Generate speech from text
+### `POST /api/synthesize`
+Generate natural speech using Murf AI Gen2.
 
 **Request:**
 ```json
 {
-  "text": "नमस्ते",
-  "language": "hi-IN",
-  "voice_id": "swara"
+  "text": "नमस्ते, आप कैसे हैं?",
+  "voice_id": "shweta"
 }
 ```
 
@@ -229,13 +245,12 @@ Generate speech from text
 ```json
 {
   "success": true,
-  "audio_url": "https://...",
-  "text": "नमस्ते"
+  "audio_url": "https://storage.murf.ai/audio/xyz123.mp3"
 }
 ```
 
-### POST `/api/translate-and-speak`
-Complete pipeline: translate and generate speech
+### `POST /api/translate-and-speak`
+Complete pipeline - translate and generate speech in one call.
 
 **Request:**
 ```json
@@ -243,167 +258,217 @@ Complete pipeline: translate and generate speech
   "text": "Hello world",
   "source_language": "en",
   "target_language": "hi",
-  "voice_id": "swara"
+  "voice_id": "shweta"
 }
 ```
 
-**Response:**
-```json
-{
-  "success": true,
-  "original_text": "Hello world",
-  "translated_text": "नमस्ते दुनिया",
-  "audio_url": "https://...",
-  "source_language": "en",
-  "target_language": "hi"
-}
-```
+For complete API documentation, see [API_REFERENCE.md](API_REFERENCE.md)
 
 ---
 
-## 🎨 Screenshots
+## 🧠 The Engineering Journey
 
-### Main Interface
+### Challenge 1: The "Python vs. Node" Dilemma
+
+**Problem:** Lingo.dev has a fantastic Node.js SDK, but my backend was built in Python (Flask).
+
+**Solution:** I engineered a **custom Node.js Bridge**. I wrote a specialized `lingo_translate.js` script and used Python's `subprocess` module to pipe data between environments. This allowed me to keep the robust Flask backend while leveraging the full power of the Lingo.dev JS SDK.
+
+### Challenge 2: The "Mirroring" Bug
+
+**Problem:** Early in development, the AI would just repeat what I said in the original language.
+
+**Solution:** I realized the bridge wasn't explicitly passing the `targetLocale`. By refactoring the bridge to accept dynamic locale arguments (`en`, `es`, `zh`), I unlocked true bi-directional translation.
+
+### Challenge 3: Migrating to Gen2
+
+**Problem:** Mid-hackathon, I encountered 400 Bad Request errors with older voice IDs.
+
+**Solution:** I deep-dived into the latest Murf AI docs and mapped out a verified **"Voice Matrix"**—switching to the newest Gen2 models like Enrique (Spanish), Amara (French), and Baolin (Chinese). Now, every language sounds pristine.
+
+*For the complete technical story, see [TECHNICAL_DEEP_DIVE.md](TECHNICAL_DEEP_DIVE.md)*
+
+---
+
+## 🎨 Designing the "Masterpiece" UI
+
+I refused to settle for a basic Bootstrap layout. I wanted **Glassmorphism**.
+
+### The AI Orb
+A central, reactive element that changes states:
+- **Red Pulse** (Listening)
+- **Purple Bounce** (Thinking)
+- **Emerald Flow** (Speaking)
+
+### The Glow Effect
+A "Call-to-Action" glow on the Translate button that only triggers once valid speech is captured.
+
+### Responsive Mesh
+A dynamic background with radial gradients that looks stunning on both mobile and desktop.
+
+---
+
+## 🎥 Demo Video
+
+[![LingoVoice AI Demo](https://img.youtube.com/vi/DEMO_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/DEMO_VIDEO_ID)
+
+**[Watch the Full Demo →](#)**
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Main Interface - Glassmorphic Design
 ![Main Interface](screenshots/main-interface.png)
 
-### Translation in Progress
-![Translation](screenshots/translation.png)
+### AI Orb States
+![AI Orb Animation](screenshots/orb-states.gif)
 
-### Audio Playback
-![Audio Player](screenshots/audio-player.png)
+### Translation in Action
+![Translation Demo](screenshots/translation-demo.png)
 
-*Note: Add actual screenshots to the `screenshots/` directory*
+### Mobile Responsive
+![Mobile View](screenshots/mobile-view.png)
 
----
-
-## 🔐 Security
-
-- ✅ API keys stored in `.env` file (not committed to repository)
-- ✅ CORS protection enabled
-- ✅ Input validation on all API endpoints
-- ✅ Secure HTTPS communication with external APIs
-- ✅ No sensitive data logged
-
----
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Speech Recognition Not Working**
-- Ensure you're using Chrome or Edge browser
-- Check microphone permissions
-- Verify microphone is connected
-
-**Translation Errors**
-- Verify Lingo.dev API key is valid
-- Check API quota limits
-- Review browser console for errors
-
-**Audio Not Playing**
-- Verify Murf AI API key
-- Check browser audio permissions
-- Ensure audio format is supported
-
-**CORS Errors**
-- Ensure `flask-cors` is installed
-- Check CORS configuration in `app.py`
-
-### Getting Help
-
-- Check the [Setup Guide](SETUP_GUIDE.md) for detailed instructions
-- Review [Lingo.dev Documentation](https://lingo.dev/en/sdk)
-- Visit [Murf AI Docs](https://murf.ai/api/docs)
-- Open an issue on GitHub
+</div>
 
 ---
 
 ## 🚀 Deployment
 
-### Deploy to Render
+### Deploy to Render (Recommended)
 
 1. Push code to GitHub
-2. Connect repository to Render
-3. Add environment variables
-4. Deploy!
+2. Create new Web Service on [render.com](https://render.com)
+3. Connect repository
+4. Add environment variables:
+   - `LINGO_API_KEY`
+   - `MURF_API_KEY`
+5. Deploy!
 
 ### Deploy to Railway
 
-1. Install Railway CLI
-2. Run `railway init`
-3. Set environment variables
-4. Run `railway up`
+```bash
+railway login
+railway init
+railway variables set LINGO_API_KEY=your_key
+railway variables set MURF_API_KEY=your_key
+railway up
+```
 
 ### Deploy to Heroku
 
-1. Create Heroku app
-2. Add buildpacks (Python + Node.js)
-3. Set config vars
-4. Push to Heroku
+```bash
+heroku create lingovoice-ai
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/python
+heroku config:set LINGO_API_KEY=your_key
+heroku config:set MURF_API_KEY=your_key
+git push heroku main
+```
+
+---
+
+## 🗺️ Roadmap
+
+### ✅ Completed
+- [x] Real-time speech-to-speech translation
+- [x] Glassmorphic UI with reactive AI Orb
+- [x] 6 languages with Gen2 neural voices
+- [x] Hybrid Flask + Node.js architecture
+- [x] Context-aware translation with Lingo.dev
+
+### 🔮 What's Next
+- [ ] **Conversation History** - Save and replay past translations
+- [ ] **Offline Mode** - Cache translations for offline use
+- [ ] **Voice Activity Detection** - Auto-stop when user stops speaking
+- [ ] **Mobile App** - React Native version
+- [ ] **Custom Voice Training** - Train on personal voice samples
+- [ ] **Real-time Collaboration** - Multi-user translation rooms
+- [ ] **Browser Extension** - Translate any webpage in real-time
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! This project was built for a hackathon, but I'd love to see it grow.
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ---
 
-## 📝 License
+## 🐛 Known Issues
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Web Speech API works best in Chrome/Edge (Firefox has limited support)
+- Murf AI audio files expire after 72 hours (regeneration required)
+- Some languages may have limited voice options in free tier
+
+**Report issues:** [GitHub Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
 
 ---
 
-## 👥 Authors
+## 📝 License
 
-- **Kavya Trivedi**  - [GitHub](https://github.com/trivedikavya)
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## 👤 Author
+
+**Kavya Trivedi**
+
+- GitHub: [@trivedikavya](https://github.com/trivedikavya)
+- Project: [LingoVoice-Agent](https://github.com/trivedikavya/LingoVoice-Agent)
 
 ---
 
 ## 🙏 Acknowledgments
 
-- **Lingo.dev** for providing the powerful localization engine
-- **Murf AI** for natural-sounding voice synthesis
-- **Web Speech API** for enabling browser-based speech recognition
-- **Tailwind CSS** for the beautiful UI components
+- **Lingo.dev** - For the powerful context-aware localization engine
+- **Murf AI** - For Gen2 neural voices that sound incredibly human
+- **Web Speech API** - For enabling browser-based speech recognition
+- **Tailwind CSS** - For making beautiful UIs accessible
+- **Hackathon 2026** - For the opportunity to build something amazing
 
 ---
 
-## 📧 Contact
+## 📚 Documentation
 
-Project Link: [https://github.com/trivedikavya/LingoVoiceAI](https://github.com/trivedikavya/LingoVoiceAI)
-
----
-
-## 🗺 Roadmap
-
-- [x] Basic speech-to-speech translation
-- [x] Multi-language support
-- [x] Beautiful UI
-- [ ] Offline mode support
-- [ ] Mobile app version
-- [ ] Conversation history
-- [ ] Custom voice training
-- [ ] Real-time collaboration
-- [ ] API rate limiting
-- [ ] Analytics dashboard
+- **[Setup Guide](SETUP_GUIDE_FINAL.md)** - Complete installation walkthrough
+- **[Technical Deep Dive](TECHNICAL_DEEP_DIVE.md)** - Engineering story and challenges
+- **[API Reference](API_REFERENCE.md)** - Detailed endpoint documentation
+- **[Commands Reference](COMMANDS.md)** - All commands in one place
 
 ---
 
-## 📈 Performance
+## 💬 The Story
 
-- **Translation Speed**: < 2 seconds
-- **Audio Generation**: < 3 seconds
-- **Total Pipeline**: < 5 seconds
-- **Accuracy**: 95%+ (context-dependent)
+> *Building this taught me that the best AI apps aren't just about the algorithms—they're about **how those algorithms make the user feel**.*
+
+For the 2026 Hackathon, my goal was to bridge the gap between "text on a screen" and "real human connection." The result is LingoVoice AI—a bi-directional speech agent that doesn't just translate words; it **speaks them with human emotion**.
+
+The Glassmorphic UI, the reactive AI Orb, the Gen2 voices—every element was chosen to create a sense of **magic**. Not the "I don't understand this" kind of magic, but the **"This feels impossibly good"** kind.
+
+That's what I wanted to build. Not just a translator, but a **communications terminal** that bridges not just languages, but **human connection itself**.
 
 ---
+
+<div align="center">
 
 **Built with ❤️ for Hackathon 2026**
+
+⭐ **Star this repo if it helped you!**
+
+[🌐 Live Demo](#) • [📹 Video Demo](#) • [📖 Full Docs](SETUP_GUIDE_FINAL.md) • [🐛 Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
+
+---
+
+*"The best AI apps aren't just about the algorithms—they're about how those algorithms make the user feel."*
+
+</div>
