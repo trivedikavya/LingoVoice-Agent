@@ -28,44 +28,44 @@
     <main class="flex-grow flex flex-col items-center justify-center px-4 relative">
         
         <div class="relative flex flex-col items-center justify-center mb-12 sm:mb-16">
-    <div id="aiOrb" class="orb-container flex items-center justify-center relative">
-        <div class="orb-core flex items-center justify-center z-10">
-            <i id="orbIcon" class="fa-solid fa-robot text-white text-2xl transition-all duration-300"></i>
+            <div id="aiOrb" class="orb-container flex items-center justify-center relative">
+                <div class="orb-core flex items-center justify-center z-10">
+                    <i id="orbIcon" class="fa-solid fa-robot text-white text-2xl transition-all duration-300"></i>
+                </div>
+                <div class="orb-ring-1"></div>
+                <div class="orb-ring-2"></div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <span id="statusLabel" class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 block">
+                    System Standby
+                </span>
+            </div>
         </div>
-        <div class="orb-ring-1"></div>
-        <div class="orb-ring-2"></div>
-    </div>
-    
-    <div class="mt-8 text-center">
-        <span id="statusLabel" class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 block">
-            System Standby
-        </span>
-    </div>
-</div>
 
         <div class="w-full max-w-lg glass-card rounded-[2.5rem] p-6 sm:p-10 shadow-2xl relative">
             
             <div class="space-y-6 sm:space-y-8">
                 <div class="flex flex-col sm:flex-row gap-4">
-    <div class="flex-1 space-y-2">
-        <label class="text-[10px] font-black text-slate-500 uppercase ml-2">Source</label>
-        <select id="sourceLanguage" class="custom-select">
-            <option value="en-US">🇺🇸 English</option>
-            <option value="hi-IN">🇮🇳 Hindi</option>
-            <option value="es-ES">🇪🇸 Spanish</option>
-            <option value="fr-FR">🇫🇷 French</option>
-        </select>
-    </div>
-    <div class="flex-1 space-y-2">
-        <label class="text-[10px] font-black text-slate-500 uppercase ml-2">Target</label>
-        <select id="targetLanguage" class="custom-select border-cyan-500/20">
-            <option value="hi">🇮🇳 Hindi</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="es">🇪🇸 Spanish</option>
-            <option value="fr">🇫🇷 French</option>
-        </select>
-    </div>
-</div>
+                    <div class="flex-1 space-y-2">
+                        <label class="text-[10px] font-black text-slate-500 uppercase ml-2">Source</label>
+                        <select id="sourceLanguage" class="custom-select">
+                            <option value="en-US">🇺🇸 English</option>
+                            <option value="hi-IN">🇮🇳 Hindi</option>
+                            <option value="es-ES">🇪🇸 Spanish</option>
+                            <option value="fr-FR">🇫🇷 French</option>
+                            <option value="zh-CN">🇨🇳 Chinese</option> <option value="de-DE">🇩🇪 German</option>   </select>
+                    </div>
+                    <div class="flex-1 space-y-2">
+                        <label class="text-[10px] font-black text-slate-500 uppercase ml-2">Target</label>
+                        <select id="targetLanguage" class="custom-select border-cyan-500/20">
+                            <option value="hi">🇮🇳 Hindi</option>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Spanish</option>
+                            <option value="fr">🇫🇷 French</option>
+                            <option value="zh">🇨🇳 Chinese</option> <option value="de">🇩🇪 German</option>   </select>
+                    </div>
+                </div>
 
                 <div class="relative">
                     <div id="transcript" class="transcript-box custom-scroll">
@@ -81,9 +81,9 @@
                     </button>
                     
                     <button id="translateBtn" class="main-btn secondary opacity-20 pointer-events-none transition-all duration-500">
-    <i class="fa-solid fa-sparkles mr-2"></i>
-    Translate & Speak
-</button>
+                        <i class="fa-solid fa-sparkles mr-2"></i>
+                        Translate & Speak
+                    </button>
                 </div>
 
                 <div id="result" class="hidden animate-in">

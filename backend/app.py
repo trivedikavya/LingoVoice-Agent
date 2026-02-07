@@ -5,27 +5,20 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
 app = Flask(__name__, template_folder="../templates", static_folder="../static")
 CORS(app)
 
-# Secure API key retrieval
 LINGO_API_KEY = os.getenv("LINGO_API_KEY")
 MURF_API_KEY = os.getenv("MURF_API_KEY")
 
 @app.route("/")
 def index():
-    """Serves the main application UI"""
     return render_template("index.html")
 
 @app.route("/api/translate-and-speak", methods=["POST"])
 def translate_and_speak():
-    """
-    Complete pipeline: Translates via Node.js Bridge and 
-    synthesizes via Murf AI using verified Gen2 IDs.
-    """
     data = request.json
     text = data.get("text")
     target_lang = data.get("target_language", "hi")
@@ -37,7 +30,6 @@ def translate_and_speak():
     try:
         script_path = os.path.join(os.path.dirname(__file__), 'utils', 'lingo_translate.js')
         
-        # Execute bridge with UTF-8 encoding
         result = subprocess.run(
             ['node', script_path, text, target_lang],
             capture_output=True,
@@ -47,9 +39,10 @@ def translate_and_speak():
         )
 
         if result.returncode != 0:
-            return jsonify({"success": False, "error": result.stderr or "SDK Error"}), 500
+            error_msg = result.stderr if result.stderr else "Unknown SDK Error"
+            return jsonify({"success": False, "error": error_msg}), 500
 
-        # Clean the output: Filter out [dotenv] system logs
+        # Clean output
         raw_output = result.stdout.strip()
         lines = [line for line in raw_output.splitlines() if not line.startswith("[dotenv]")]
         translated_text = lines[-1].strip() if lines else ""
@@ -64,15 +57,17 @@ def translate_and_speak():
     audio_url = None
     if MURF_API_KEY:
         try:
-            # Verified High-Quality Gen2 IDs
+            # Verified Gen2 IDs
             voice_map = {
                 "hi": "shweta",      # Hindi (Female)
                 "en": "natalie",     # English (Female)
-                "es": "enrique",     # Spanish (Male) - FIXED
-                "fr": "amara",       # French (Female) - FIXED
-                "zh": "baolin",      # Chinese (Male) - FIXED
-                "de": "werner"       # German (Male)
+                "es": "enrique",     # Spanish (Male)
+                "fr": "amara",       # French (Female)
+                "zh": "baolin",      # Chinese (Male) - VERIFIED
+                "de": "matthias"     # German (Male) - VERIFIED (Replaced 'werner')
             }
+            
+            # Fallback to English if language not found
             voice_id = voice_map.get(target_lang, "natalie")
 
             res = requests.post(
@@ -82,7 +77,7 @@ def translate_and_speak():
                     "text": translated_text, 
                     "voice_id": voice_id,
                     "format": "MP3",
-                    "modelVersion": "GEN2" # Explicitly use latest Gen2 model
+                    "modelVersion": "GEN2"
                 }
             )
             
