@@ -336,40 +336,6 @@ A dynamic background with radial gradients that looks stunning on both mobile an
 
 ---
 
-## 🚀 Deployment
-
-### Deploy to Render (Recommended)
-
-1. Push code to GitHub
-2. Create new Web Service on [render.com](https://render.com)
-3. Connect repository
-4. Add environment variables:
-   - `LINGO_API_KEY`
-   - `MURF_API_KEY`
-5. Deploy!
-
-### Deploy to Railway
-
-```bash
-railway login
-railway init
-railway variables set LINGO_API_KEY=your_key
-railway variables set MURF_API_KEY=your_key
-railway up
-```
-
-### Deploy to Heroku
-
-```bash
-heroku create lingovoice-ai
-heroku buildpacks:add heroku/nodejs
-heroku buildpacks:add heroku/python
-heroku config:set LINGO_API_KEY=your_key
-heroku config:set MURF_API_KEY=your_key
-git push heroku main
-```
-
----
 
 ## 🗺️ Roadmap
 
