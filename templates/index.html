@@ -2,68 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LingoVoice AI - Universal Translator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LingoVoice AI | The Future of Translation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4">
-    <div class="max-w-md w-full space-y-4">
+<body class="bg-[#050505] text-slate-200 min-h-screen flex flex-col font-sans overflow-x-hidden">
+
+    <div class="mesh-bg"></div>
+
+    <nav class="w-full p-6 flex justify-between items-center z-50">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+                <i class="fa-solid fa-globe text-white text-xs"></i>
+            </div>
+            <span class="font-black tracking-tighter text-xl">LINGOVOICE <span class="text-cyan-500">AI</span></span>
+        </div>
+        <button class="p-2 px-4 rounded-full bg-slate-900/50 border border-slate-800 text-xs font-bold hover:bg-slate-800 transition-all">
+            HACKATHON v1.0
+        </button>
+    </nav>
+
+    <main class="flex-grow flex flex-col items-center justify-center px-4 relative">
         
-        <div class="bg-slate-800 p-6 rounded-3xl shadow-2xl border border-slate-700 glass-panel">
-            <header class="text-center mb-6">
-                <h1 class="text-2xl font-bold text-cyan-400">Step 1: Capture Speech</h1>
-            </header>
-            
-            <div class="space-y-4">
-                <div class="space-y-2">
-                    <label class="text-xs font-semibold text-slate-500 uppercase ml-1">I am speaking</label>
-                    <select id="sourceLanguage" class="w-full bg-slate-700 text-white p-3 rounded-xl outline-none border border-slate-600 focus:border-cyan-500">
-                        <option class="text-slate-900" value="en-US">🇺🇸 English</option>
-                        <option class="text-slate-900" value="zh-CN">🇨🇳 Chinese</option>
-                        <option class="text-slate-900" value="hi-IN">🇮🇳 Hindi</option>
-                    </select>
-                </div>
-
-                <button id="recordBtn" class="w-full bg-cyan-600 hover:bg-cyan-500 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-3 active:scale-95 shadow-lg">
-                    <i class="fa-solid fa-microphone" id="micIcon"></i> 
-                    <span id="recordBtnText">Start Recording</span>
-                </button>
-
-                <div class="h-24 bg-slate-900/50 rounded-2xl p-4 text-sm text-slate-300 italic border border-slate-700 overflow-y-auto" id="transcript">
-                    Transcript will appear here...
-                </div>
-            </div>
+        <div class="relative flex flex-col items-center justify-center mb-12 sm:mb-16">
+    <div id="aiOrb" class="orb-container flex items-center justify-center relative">
+        <div class="orb-core flex items-center justify-center z-10">
+            <i id="orbIcon" class="fa-solid fa-robot text-white text-2xl transition-all duration-300"></i>
         </div>
-
-        <div id="translationStep" class="bg-slate-800 p-6 rounded-3xl shadow-2xl border border-slate-700 glass-panel opacity-50 pointer-events-none transition-opacity duration-300">
-            <header class="text-center mb-6">
-                <h1 class="text-2xl font-bold text-emerald-400">Step 2: Translate</h1>
-            </header>
-
-            <div class="space-y-4">
-                <div class="space-y-2">
-                    <label class="text-xs font-semibold text-slate-500 uppercase ml-1">Translate to</label>
-                    <select id="targetLanguage" class="w-full bg-slate-700 text-white p-3 rounded-xl outline-none border border-slate-600 focus:border-emerald-500">
-                        <option class="text-slate-900" value="hi">🇮🇳 Hindi</option>
-                        <option class="text-slate-900" value="es">🇪🇸 Spanish</option>
-                        <option class="text-slate-900" value="fr">🇫🇷 French</option>
-                        <option class="text-slate-900" value="en">🇺🇸 English</option>
-                    </select>
-                </div>
-
-                <button id="translateBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-3 shadow-lg active:scale-95">
-                    <i class="fa-solid fa-language"></i> Now Translate It
-                </button>
-
-                <div id="result" class="hidden p-4 bg-emerald-950/40 rounded-2xl border border-emerald-500/30">
-                    <p id="translatedText" class="text-lg text-white font-medium leading-relaxed"></p>
-                </div>
-            </div>
-        </div>
+        <div class="orb-ring-1"></div>
+        <div class="orb-ring-2"></div>
     </div>
+    
+    <div class="mt-8 text-center">
+        <span id="statusLabel" class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 block">
+            System Standby
+        </span>
+    </div>
+</div>
+
+        <div class="w-full max-w-lg glass-card rounded-[2.5rem] p-6 sm:p-10 shadow-2xl relative">
+            
+            <div class="space-y-6 sm:space-y-8">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-1 space-y-2">
+                        <label class="text-[10px] font-black text-slate-500 uppercase ml-2">Source</label>
+                        <select id="sourceLanguage" class="custom-select">
+                            <option value="en-US">🇺🇸 English</option>
+                            <option value="hi-IN">🇮🇳 Hindi</option>
+                        </select>
+                    </div>
+                    <div class="flex-1 space-y-2">
+                        <label class="text-[10px] font-black text-slate-500 uppercase ml-2">Target</label>
+                        <select id="targetLanguage" class="custom-select border-cyan-500/20">
+                            <option value="hi">🇮🇳 Hindi</option>
+                            <option value="es">🇪🇸 Spanish</option>
+                            <option value="fr">🇫🇷 French</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div id="transcript" class="transcript-box custom-scroll">
+                        Ready for your command...
+                    </div>
+                    <div class="pulse-line"></div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <button id="recordBtn" class="main-btn primary">
+                        <i class="fa-solid fa-microphone-lines mr-2" id="micIcon"></i>
+                        <span id="recordBtnText">Capture Voice</span>
+                    </button>
+                    
+                    <button id="translateBtn" class="main-btn secondary opacity-20 pointer-events-none transition-all duration-500">
+    <i class="fa-solid fa-sparkles mr-2"></i>
+    Translate & Speak
+</button>
+                </div>
+
+                <div id="result" class="hidden animate-in">
+                    <div class="p-6 bg-cyan-500/5 rounded-3xl border border-cyan-500/20 shadow-inner">
+                        <p class="text-[9px] font-black text-cyan-500 uppercase tracking-widest mb-3">Localized Output</p>
+                        <p id="translatedText" class="text-xl text-white font-medium leading-tight"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-8 text-center">
+        <p class="text-[10px] text-slate-600 font-bold uppercase tracking-widest">Powered by Lingo.dev Localization SDK</p>
+    </footer>
 
     <script src="/static/js/app.js"></script>
 </body>
