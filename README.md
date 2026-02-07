@@ -10,12 +10,35 @@
 ![Node.js](https://img.shields.io/badge/node.js-16+-green?style=for-the-badge&logo=node.js)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-**[🎥 Demo Video](#) • [📖 Documentation](SETUP_GUIDE_FINAL.md) • [🐛 Report Bug](https://github.com/trivedikavya/LingoVoice-Agent/issues)**
+**[🎥 Demo Video](https://youtu.be/SpB48Mos6JQ) • [📖 Documentation](SETUP_GUIDE_FINAL.md) • [🐛 Report Bug](https://github.com/trivedikavya/LingoVoice-Agent/issues)**
 
 ---
 
 *For the 2026 Hackathon, I didn't just want to build another "translator app."  
 I wanted to build a **communications terminal**—something that felt like it came from a sci-fi movie.*
+
+</div>
+
+---
+
+## 🎥 Demo Video
+
+[![LingoVoice AI Demo](https://img.youtube.com/vi/SpB48Mos6JQ/maxresdefault.jpg)](https://youtu.be/SpB48Mos6JQ)
+
+**[▶️ Watch the Full Demo →](https://youtu.be/SpB48Mos6JQ)**
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Main Interface - Glassmorphic Design
+![Main Interface](screenshots/mainimg.png)
+
+### Language Selection Dropdown
+![Language Dropdown](screenshots/DROPDOWN.png)
+
 
 </div>
 
@@ -306,33 +329,6 @@ A "Call-to-Action" glow on the Translate button that only triggers once valid sp
 ### Responsive Mesh
 A dynamic background with radial gradients that looks stunning on both mobile and desktop.
 
----
-
-## 🎥 Demo Video
-
-[![LingoVoice AI Demo](https://img.youtube.com/vi/DEMO_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/DEMO_VIDEO_ID)
-
-**[Watch the Full Demo →](#)**
-
----
-
-## 📸 Screenshots
-
-<div align="center">
-
-### Main Interface - Glassmorphic Design
-![Main Interface](screenshots/main-interface.png)
-
-### AI Orb States
-![AI Orb Animation](screenshots/orb-states.gif)
-
-### Translation in Action
-![Translation Demo](screenshots/translation-demo.png)
-
-### Mobile Responsive
-![Mobile View](screenshots/mobile-view.png)
-
-</div>
 
 ---
 
