@@ -10,7 +10,7 @@
 ![Node.js](https://img.shields.io/badge/node.js-16+-green?style=for-the-badge&logo=node.js)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-**[🎥 Demo Video](https://youtu.be/SpB48Mos6JQ) • [📖 Documentation](SETUP_GUIDE_FINAL.md) • [🐛 Report Bug](https://github.com/trivedikavya/LingoVoice-Agent/issues)**
+**[🎥 Demo Video](https://youtu.be/rzQIBQns-Kg) • [📖 Documentation](SETUP_GUIDE_FINAL.md) • [🐛 Report Bug](https://github.com/trivedikavya/LingoVoice-Agent/issues)**
 
 ---
 
@@ -23,9 +23,9 @@ I wanted to build a **communications terminal**—something that felt like it ca
 
 ## 🎥 Demo Video
 
-[![LingoVoice AI Demo](https://img.youtube.com/vi/SpB48Mos6JQ/maxresdefault.jpg)](https://youtu.be/SpB48Mos6JQ)
+[![LingoVoice AI Demo](https://img.youtube.com/vi/rzQIBQns-Kg/maxresdefault.jpg)](https://youtu.be/rzQIBQns-Kg)
 
-**[▶️ Watch the Full Demo →](https://youtu.be/SpB48Mos6JQ)**
+**[▶️ Watch the Full Demo →](https://youtu.be/rzQIBQns-Kg)**
 
 ---
 
@@ -307,7 +307,7 @@ For complete API documentation, see [API_REFERENCE.md](API_REFERENCE.md)
 
 **Problem:** Mid-hackathon, I encountered 400 Bad Request errors with older voice IDs.
 
-**Solution:** I deep-dived into the latest Murf AI docs and mapped out a verified **"Voice Matrix"**—switching to the newest Gen2 models like Enrique (Spanish), Amara (French), and Baolin (Chinese). Now, every language sounds pristine.
+**Solution:** I deep-dived into the latest Murf AI docs and mapped out a verified **"Voice Matrix"** switching to the newest Gen2 models like Enrique (Spanish), Amara (French), and Baolin (Chinese). Now, every language sounds pristine.
 
 *For the complete technical story, see [TECHNICAL_DEEP_DIVE.md](TECHNICAL_DEEP_DIVE.md)*
 
@@ -411,11 +411,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 💬 The Story
 
-> *Building this taught me that the best AI apps aren't just about the algorithms—they're about **how those algorithms make the user feel**.*
+> *Building this taught me that the best AI apps aren't just about the algorithms they're about **how those algorithms make the user feel**.*
 
 For the 2026 Hackathon, my goal was to bridge the gap between "text on a screen" and "real human connection." The result is LingoVoice AI—a bi-directional speech agent that doesn't just translate words; it **speaks them with human emotion**.
 
-The Glassmorphic UI, the reactive AI Orb, the Gen2 voices—every element was chosen to create a sense of **magic**. Not the "I don't understand this" kind of magic, but the **"This feels impossibly good"** kind.
+The Glassmorphic UI, the reactive AI Orb, the Gen2 voices every element was chosen to create a sense of **magic**. Not the "I don't understand this" kind of magic, but the **"This feels impossibly good"** kind.
 
 That's what I wanted to build. Not just a translator, but a **communications terminal** that bridges not just languages, but **human connection itself**.
 
@@ -427,10 +427,10 @@ That's what I wanted to build. Not just a translator, but a **communications ter
 
 ⭐ **Star this repo if it helped you!**
 
-[📹 Video Demo](#) • [📖 Full Docs](SETUP_GUIDE_FINAL.md) • [🐛 Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
+[📹 Video Demo](https://youtu.be/rzQIBQns-Kg) • [📖 Full Docs](SETUP_GUIDE_FINAL.md) • [🐛 Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
 
 ---
 
-*"The best AI apps aren't just about the algorithms—they're about how those algorithms make the user feel."*
+*"The best AI apps aren't just about the algorithms they're about how those algorithms make the user feel."*
 
 </div>
