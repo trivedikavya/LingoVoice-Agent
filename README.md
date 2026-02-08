@@ -15,7 +15,7 @@
 ---
 
 *For the 2026 Hackathon, I didn't just want to build another "translator app."  
-I wanted to build a **communications terminal**—something that felt like it came from a sci-fi movie.*
+I wanted to build a **communications terminal** something that felt like it came from a sci-fi movie.*
 
 </div>
 
