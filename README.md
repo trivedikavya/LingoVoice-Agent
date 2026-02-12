@@ -402,7 +402,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📚 Documentation
 
-- **[Setup Guide](SETUP_GUIDE_FINAL.md)** - Complete installation walkthrough
 - **[Technical Deep Dive](TECHNICAL_DEEP_DIVE.md)** - Engineering story and challenges
 - **[API Reference](API_REFERENCE.md)** - Detailed endpoint documentation
 - **[Commands Reference](COMMANDS.md)** - All commands in one place
