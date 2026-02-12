@@ -10,7 +10,7 @@
 ![Node.js](https://img.shields.io/badge/node.js-16+-green?style=for-the-badge&logo=node.js)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-**[🎥 Demo Video](https://youtu.be/rzQIBQns-Kg) • [📖 Documentation](SETUP_GUIDE_FINAL.md) • [🐛 Report Bug](https://github.com/trivedikavya/LingoVoice-Agent/issues)**
+**[🎥 Demo Video](https://youtu.be/rzQIBQns-Kg) • [📖 Documentation](TECHNICAL_DEEP_DIVE.md) • [🐛 Report Bug](https://github.com/trivedikavya/LingoVoice-Agent/issues)**
 
 ---
 
