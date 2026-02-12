@@ -427,7 +427,7 @@ That's what I wanted to build. Not just a translator, but a **communications ter
 
 ⭐ **Star this repo if it helped you!**
 
-[📹 Video Demo](https://youtu.be/rzQIBQns-Kg) • [📖 Full Docs](SETUP_GUIDE_FINAL.md) • [🐛 Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
+[📹 Video Demo](https://youtu.be/rzQIBQns-Kg) • [📖 Full Docs](TECHNICAL_DEEP_DIVE.md) • [🐛 Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
 
 ---
 
