@@ -555,6 +555,6 @@ And I think I got pretty close.
 
 If this story inspired you, [⭐ star the repo](https://github.com/trivedikavya/LingoVoice-Agent)!
 
-[🌐 Try the Demo](#) • [📖 Read the Docs](SETUP_GUIDE_FINAL.md) • [🐛 Report Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
+[🌐 the Demo](https://youtu.be/rzQIBQns-Kg) • [📖 Read the Docs](SETUP_GUIDE_FINAL.md) • [🐛 Report Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
 
 </div>
