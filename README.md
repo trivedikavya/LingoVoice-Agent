@@ -1,4 +1,4 @@
-# 🌍 LingoVoice AI
+# LingoVoice AI
 
 **Breaking Language Barriers with Real-Time Neural Speech Translation**
 
@@ -21,15 +21,15 @@ I wanted to build a **communications terminal** something that felt like it came
 
 ---
 
-## 🎥 Demo Video
+## Demo Video
 
 [![LingoVoice AI Demo](https://img.youtube.com/vi/rzQIBQns-Kg/maxresdefault.jpg)](https://youtu.be/rzQIBQns-Kg)
 
-**[▶️ Watch the Full Demo →](https://youtu.be/rzQIBQns-Kg)**
+**[ Watch the Full Demo →](https://youtu.be/rzQIBQns-Kg)**
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 <div align="center">
 
@@ -44,7 +44,7 @@ I wanted to build a **communications terminal** something that felt like it came
 
 ---
 
-## 💡 The Problem Statement
+##  The Problem Statement
 
 In an increasingly connected world, **language barriers remain the biggest obstacle to real-time communication**. Existing translation tools often:
 
@@ -57,7 +57,7 @@ Standard text-to-speech engines are technically functional but emotionally hollo
 
 ---
 
-## ✨ The Solution
+##  The Solution
 
 **LingoVoice AI** is a bi-directional, real-time speech-to-speech agent that bridges the gap between "text on a screen" and "real human connection."
 
@@ -69,15 +69,15 @@ Unlike simple translators, LingoVoice **understands locale nuances** and **speak
 
 ---
 
-## 🎯 Key Features
+##  Key Features
 
-### 🌐 Bi-Directional Polyglot
+###  Bi-Directional Polyglot
 Seamlessly translates between **English, Hindi, Spanish, French, Chinese, and German** with cultural context preservation.
 
-### 🎙️ Gen2 Neural Voices
+###  Gen2 Neural Voices
 Uses verified, high-fidelity voices (**Enrique**, **Amara**, **Shweta**, **Baolin**) that sound **indistinguishable from humans**. These voices breathe, pause, and intonate naturally.
 
-### 🎨 "Masterpiece" UI
+###  "Masterpiece" UI
 A fully responsive, **dark-mode Glassmorphism** design featuring:
 - **Reactive AI Orb** - Changes color and animation based on system state
   - 🔴 **Red Pulse** → Listening
@@ -87,20 +87,20 @@ A fully responsive, **dark-mode Glassmorphism** design featuring:
 - **Responsive Mesh Background** - Dynamic gradients stunning on any device
 - **Real-Time Visual Feedback** - Icons and animations guide every interaction
 
-### 🏗️ Smart Hybrid Architecture
+###  Smart Hybrid Architecture
 A unique **Flask + Node.js Bridge** that leverages:
 - Python's robust web serving capabilities
 - JavaScript SDK's full power for Lingo.dev integration
 - Seamless inter-process communication
 
-### ⚡ Real-Time Performance
+###  Real-Time Performance
 - Translation Speed: **< 2 seconds**
 - Audio Generation: **< 3 seconds**
 - Total Pipeline: **< 5 seconds** end-to-end
 
 ---
 
-## 🛠️ The Tech Stack
+##  The Tech Stack
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
@@ -113,7 +113,7 @@ A unique **Flask + Node.js Bridge** that leverages:
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -156,7 +156,7 @@ python backend/app.py
 
 ---
 
-## 🎮 How It Works
+##  How It Works
 
 1. **Select Languages** - Choose source (your language) and target (translation)
 2. **Click "Start Listening"** - AI Orb turns red and pulses
@@ -166,7 +166,7 @@ python backend/app.py
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```
 LingoVoice-Agent/
@@ -192,7 +192,7 @@ LingoVoice-Agent/
 
 ---
 
-## 🎨 The AI Orb: Visual State Machine
+##  The AI Orb: Visual State Machine
 
 The central **AI Orb** provides instant visual feedback:
 
@@ -212,7 +212,7 @@ Each state includes:
 
 ---
 
-## 🌐 Supported Languages & Voices
+##  Supported Languages & Voices
 
 | Language | Code | Voice Name | Voice ID | Type | Gender |
 |----------|------|------------|----------|------|--------|
@@ -228,7 +228,7 @@ All voices are **Murf AI Gen2** - the latest generation with hyper-realistic int
 
 ---
 
-## 📊 API Endpoints
+##  API Endpoints
 
 ### `POST /api/translate`
 Translate text using Lingo.dev's context-aware engine.
@@ -289,7 +289,7 @@ For complete API documentation, see [API_REFERENCE.md](API_REFERENCE.md)
 
 ---
 
-## 🧠 The Engineering Journey
+##  The Engineering Journey
 
 ### Challenge 1: The "Python vs. Node" Dilemma
 
@@ -313,7 +313,7 @@ For complete API documentation, see [API_REFERENCE.md](API_REFERENCE.md)
 
 ---
 
-## 🎨 Designing the "Masterpiece" UI
+##  Designing the "Masterpiece" UI
 
 I refused to settle for a basic Bootstrap layout. I wanted **Glassmorphism**.
 
@@ -333,7 +333,7 @@ A dynamic background with radial gradients that looks stunning on both mobile an
 ---
 
 
-## 🗺️ Roadmap
+##  Roadmap
 
 ### ✅ Completed
 - [x] Real-time speech-to-speech translation
@@ -353,7 +353,7 @@ A dynamic background with radial gradients that looks stunning on both mobile an
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! This project was built for a hackathon, but I'd love to see it grow.
 
@@ -365,7 +365,7 @@ Contributions are welcome! This project was built for a hackathon, but I'd love 
 
 ---
 
-## 🐛 Known Issues
+##  Known Issues
 
 - Web Speech API works best in Chrome/Edge (Firefox has limited support)
 - Murf AI audio files expire after 72 hours (regeneration required)
@@ -375,13 +375,13 @@ Contributions are welcome! This project was built for a hackathon, but I'd love 
 
 ---
 
-## 📝 License
+##  License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 👤 Author
+##  Author
 
 **Kavya Trivedi**
 
@@ -390,7 +390,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Lingo.dev** - For the powerful context-aware localization engine
 - **Murf AI** - For Gen2 neural voices that sound incredibly human
@@ -400,7 +400,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 - **[Technical Deep Dive](TECHNICAL_DEEP_DIVE.md)** - Engineering story and challenges
 - **[API Reference](API_REFERENCE.md)** - Detailed endpoint documentation
@@ -408,7 +408,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 💬 The Story
+##  The Story
 
 > *Building this taught me that the best AI apps aren't just about the algorithms they're about **how those algorithms make the user feel**.*
 
@@ -424,7 +424,7 @@ That's what I wanted to build. Not just a translator, but a **communications ter
 
 **Built with ❤️ for Hackathon 2026**
 
-⭐ **Star this repo if it helped you!**
+ **Star this repo if it helped you!**
 
 [📹 Video Demo](https://youtu.be/rzQIBQns-Kg) • [📖 Full Docs](TECHNICAL_DEEP_DIVE.md) • [🐛 Issues](https://github.com/trivedikavya/LingoVoice-Agent/issues)
 
